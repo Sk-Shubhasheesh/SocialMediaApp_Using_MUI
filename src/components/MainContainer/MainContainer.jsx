@@ -17,12 +17,15 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function RowAndColumnSpacing() {
   return (
-    <Box sx={{ width: '100%', mt: '3rem' }}>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    <Box display="flex" justifyContent="center" sx={{ width: '100%', mt: '3rem' }}>
+      <Grid container alignItems={"start"} justifyContent={"center"} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid size={{ xs: 0, md: 3 }}>
+         {/* Users */}
           <Item>1</Item>
         </Grid>
         <Grid container alignItems={"center"} justifyContent={"center"} direction={"column"} size={{ xs: 12, md: 9 }}>
+
+          {/* Posts */}
           <PostCard  />
           <PostCard  />
           <PostCard  />
